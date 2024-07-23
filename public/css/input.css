@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply bg-slate-200 flex justify-center items-center h-screen w-screen;
+  }
+
+  .calculator {
+    @apply max-w-[300px] relative w-full rounded-xl p-[20px] shadow-[5px_5px_0px_2px_rgba(20,111,108,1)] bg-[#2f2f2f];
+  }
+
+  .calculator .header {
+    @apply text-white flex justify-between items-center gap-4 mb-4;
+  }
+
+  .calculator .header:nth-child(1) {
+    @apply text-xl font-semibold;
+  }
+
+  .calculator .header span {
+    @apply block w-full h-[30px] bg-[#47312a] shadow-inner;
+  }
+
+  .calculator .header .spec {
+    @apply flex justify-center items-center gap-2;
+  }
+
+  .calculator .header .spec h3 {
+    @apply text-[10px] font-semibold text-nowrap;
+  }
+
+  .calculator .header .spec div {
+    @apply flex flex-col justify-center items-center relative;
+  }
+
+  .calculator .header .spec div h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  .calculator .header .spec div p {
+    @apply text-[8px] absolute -bottom-3 w-full block text-center font-semibold;
+  }
+
+  .calculator .display {
+    @apply h-[80px] w-full text-right mb-[10px] text-[35px] outline-none border-none text-[#000002] pointer-events-none px-2 rounded-sm shadow-inner bg-[#d4e4e3];
+  }
+
+  .calculator .button {
+    @apply grid grid-cols-4 gap-[10px];
+  }
+
+  .calculator .button button {
+    @apply p-[10px] rounded-md text-[20px] border-none bg-[#867f77] cursor-pointer active:scale-[0.95] text-white shadow-[2px_3px_2px_2px_rgba(0,0,0,0.2)];
+  }
+
+  .calculator .button .oprator {
+    @apply text-white bg-[#292929];
+  }
+}
